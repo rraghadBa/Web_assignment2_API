@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Countries Explorer</title>
+  <link rel="stylesheet" href="CSS/style.css" />
+  <script defer src="JS/script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&family=Raleway&display=swap" 
+  rel="stylesheet">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1 class="title">Get informations about countries</h1>
+    </header>
+
+    <section>
+      <form id="countryForm">
+        <input type="text" id="countryInput" placeholder="Enter country name" />
+        <button type="submit">Search</button>
+        <p id="message" class="message"></p>
+      </form>
+       <!--clear all data or show random country -->
+      <div class="controls">
+        <button id="clearBtn">Clear Data</button>
+        <button id="randomBtn">Random Country</button>
+      </div>
+    </section>
+
+    <section id="countryInfo" class="info-container">
+      <!-- Template for a country card --hidden and cloned in JS-- -->
+      <article class="country-card template" hidden>
+        <img class="country-flag" src="" alt="Country Flag" />
+        <h2 class="country-name"></h2>
+
+        <!-- Country details -->
+        <p><strong>Capital:</strong> <span class="country-capital"></span></p>
+        <p><strong>Region:</strong> <span class="country-region"></span></p>
+        <p><strong>Population:</strong> <span class="country-population"></span></p>
+        <div>
+          <strong>Languages:</strong>
+          <div class="languages"></div>
+        </div>
+        <!-- Link to Google Maps -->
+        <a href="#" class="map-link" target="_blank">View on Google Maps</a>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
